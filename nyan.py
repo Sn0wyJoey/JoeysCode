@@ -2,5 +2,6 @@
 import time
 import colors as c
 while True:
+    except KeyboardInterrupt:
     print(c.random() + "Joey is awesome",end="")
     time.sleep(1)
