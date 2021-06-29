@@ -12,4 +12,4 @@ circum = 2 * Radius * math.pi
 print ("""With a circle with a radius of {},
 The Area is {},
 The Diameter is {}, 
-The Circumfrence is {}""".format(round(Radius , 1), round(area , 2), round(diameter , 2), round(circum , 2)))
+The Circumference is {}""".format(round(Radius , 1), round(area , 2), round(diameter , 2), round(circum , 2)))
