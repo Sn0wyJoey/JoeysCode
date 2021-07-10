@@ -8,5 +8,5 @@
 
 ### Upload changes
 `git add .`
-`git commit -a -m "message"`
+`git commit -m "message"`
 `git push`
