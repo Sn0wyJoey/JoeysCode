@@ -1,112 +1,105 @@
-"""Solarized color terminal.
-This module contains some mappings for the ANSI terminal escapes support
-the 16 colors of the Solarized color palette created by Ethan Schoonover.
-"""
+import random as r
 
-base03  = '\033[1;30m'
-BASE03  = base03
-B03     = base03
-b03     = base03
+reset = '\u001b[0m'
+black = '\u001b[30m'
+red = '\u001b[31m'
+green = '\u001b[32m'
+yellow = '\u001b[33m'
+blue = '\u001b[34m'
+magenta = '\u001b[35m'
+cyan = '\u001b[36m'
+white = '\u001b[37m'
 
-base02  = '\033[0;30m'
-BASE02  = base02
-B02     = base02
-b02     = base02
+bright_black = '\u001b[30;1m'
+bright_red = '\u001b[31;1m'
+bright_green = '\u001b[32;1m'
+bright_yellow = '\u001b[33;1m'
+bright_blue = '\u001b[34;1m'
+bright_magenta = '\u001b[35;1m'
+bright_cyan = '\u001b[36;1m'
+bright_white = '\u001b[37;1m'
 
-base01  = '\033[1;32m'
-BASE01  = base01
-B01     = base01
-b01     = base01
+background_black = '\u001b[40m'
+background_red = '\u001b[41m'
+background_green = '\u001b[42m'
+background_yellow = '\u001b[43m'
+background_blue = '\u001b[44m'
+background_magenta = '\u001b[45m'
+background_cyan = '\u001b[46m'
+background_white = '\u001b[47m'
 
-base00  = '\033[1;33m'
-BASE00  = base00
-B00     = base00
-b00     = base00
+background_bright_black = '\u001b[40;1m'
+background_bright_red = '\u001b[41;1m'
+background_bright_green = '\u001b[42;1m'
+background_bright_yellow = '\u001b[43;1m'
+background_bright_blue = '\u001b[44;1m'
+background_bright_magenta = '\u001b[45;1m'
+background_bright_cyan = '\u001b[46;1m'
+background_bright_white = '\u001b[47;1m'
 
-base0   = '\033[1;34m'
-BASE0   = base0
-B0      = base0
-b0      = base0
+bold = '\u001b[1m'
+underline = '\u001b[4m'
+reversedcolor = '\u001b[7m'
 
-base1   = '\033[1;36m'
-BASE1   = base1
-B1      = base1
-b1      = base1
+b_black = background_black
+b_red = background_red
+b_green = background_green
+b_yellow = background_yellow 
+b_blue = background_blue
+b_magenta = background_magenta
+b_cyan = background_cyan
+b_white = background_white
 
-base2   = '\033[0;37m'
-BASE2   = base2
-B2      = base2
-b2      = base2
+br_black = bright_black
+br_red = bright_red
+br_green = bright_green
+br_yellow = bright_yellow
+br_blue = bright_blue
+br_magenta = bright_magenta
+br_cyan = bright_cyan
+br_white = bright_white
 
-base3   = '\033[1;37m'
-BASE3   = base3
-B3      = base3
-b3      = base3
+re = reset
+clear = reset
 
-yellow  = '\033[0;33m'
-YELLOW  = yellow
-Y       = yellow
-y       = yellow
-
-orange  = '\033[1;31m'
-ORANGE  = orange
-O       = orange
-o       = orange
-
-red     = '\033[0;31m'
-RED     = red 
-R       = red 
-r       = red 
-
-magenta = '\033[0;35m'
-MAGENTA = magenta
-M       = magenta
-m       = magenta
-
-violet  = '\033[1;35m'
-VIOLET  = violet
-V       = violet
-v       = violet
-
-blue    = '\033[0;34m'
-BLUE    = blue
-B       = blue
-b       = blue
-
-cyan    = '\033[0;36m'
-C       = cyan
-c       = cyan
-
-green   = '\033[0;32m'
-G       = green
-g       = green
-
-reset   = '\033[0m'
-RESET   = reset
-X       = '\033[0m'
-x       = '\033[0m'
-
-conceil = '\033[0;8m'
-CONCEIL = conceil
-
-clear   = '\033[H\033[2J'
-CLEAR   = clear
-CL      = clear
-cl      = clear
-
-import random as rand
 def random_color():
-    return rand.choice([yellow, orange, red, magenta, violet, blue, cyan, green])
-rc = random_color
-random = random_color
+    randomColor = r.choice([red, green, yellow, blue, magenta, cyan, white])
+    return randomColor
 
-def multi(text):
-    """Prints text with each character a random color.
-    
-    Args:
-        text (str): The text to print.
-    """
-    buf = ''
-    for char in text:
-        buf += rc() + char + x
-    return buf
+rc = random_color
+
+def random_background():
+    randomBackround = r.choice([background_red, background_green, background_yellow, background_blue, background_magenta, background_cyan, background_white])
+    return randomBackround
+rb = random_background
+
+def random_all():
+    randomAll = r.choice([reset, red, green, yellow, blue, magenta, cyan, white, bright_red, bright_green, bright_yellow, bright_blue, bright_magenta, bright_cyan, bright_white, background_red, background_green, background_yellow, background_blue, background_magenta, background_cyan, background_white, background_bright_red, background_bright_green, background_bright_yellow, background_bright_blue, background_bright_magenta, background_bright_cyan, background_bright_white])
+    return randomAll
+
+random = random_all
+ra = random_all
+
+def multi_color(text):
+    z = ''
+    for count in range(len(text)):
+        z += rc() + text[count] + re
+    return z
+
+mc = multi_color
+
+def multi_backround(text):
+    z = ''
+    for count in range(len(text)):
+        z += rb() + text[count] + re
+    return z
+
+mb = multi_backround
+
+def multi_all(text):
+    z = ''
+    for count in range(len(text)):
+        z += ra() + text[count] + re
+    return z
+
+ma = multi_all
