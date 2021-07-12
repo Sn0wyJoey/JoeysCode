@@ -9,4 +9,4 @@
 ### Upload changes
 `git add .`
 `git commit -m "message"`
-`git push`g
+`git push`
