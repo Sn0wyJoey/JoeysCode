@@ -1,5 +1,6 @@
 import colors as c
 import requests
+
 Space = (" >")
 print("Welcome to the Weather Program!")
 while True:

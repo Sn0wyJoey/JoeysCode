@@ -46,10 +46,10 @@ while options != []:
     
     if winner(mat) == True:
         if playernum == 1:
-            print('Player 2 has won the game.')
+            print('Player 2 has won the game!')
         else:
-            print('Player 1 has won the game.')
+            print('Player 1 has won the game!')
         break
 
 if winner(mat) != True:
-    print('You tied')
+    print('You tied!')
