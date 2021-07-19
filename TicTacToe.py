@@ -46,7 +46,6 @@ while options != []:
     
     if winner(mat) == True:
         if playernum == 1:
-<<<<<<< HEAD
             print('Player 2 has won the game!')
         else:
             print('Player 1 has won the game!')
@@ -54,12 +53,3 @@ while options != []:
 
 if winner(mat) != True:
     print('You tied!')
-=======
-            print('Player 2 has won the game.')
-        else:
-            print('Player 1 has won the game.')
-        break
-
-if winner(mat) != True:
-    print('You tied')
->>>>>>> origin/master
