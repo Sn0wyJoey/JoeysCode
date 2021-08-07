@@ -2,10 +2,10 @@ First day of School,30/8/21
 Last day of School,10/6/22
 Birthday,10/12/21
 Winter Break,20/12/21
-Test Event,20/12/21
-Test Event,20/12/21
-Test Event,20/12/21
-Test Event,20/12/21
-Test Event,20/12/21
-Test Event,20/12/21
-Test Event,20/12/21
+Test Event,26/12/21
+Tennis Class,10/8/21
+End of Vacation,11/8/21
+Vacation,8/8/21
+Dentist Appointment,13/8/21
+Viola Class,14/8/21
+Cross Country Class,10/8/21
