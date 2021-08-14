@@ -1,0 +1,8 @@
+France/Paris
+Poland/Warsaw
+United kingdom/London
+Argentina/Buenos Aires
+United states/Washington DC
+egypt/Cairo
+usa/Washington dc
+germany/Berlin

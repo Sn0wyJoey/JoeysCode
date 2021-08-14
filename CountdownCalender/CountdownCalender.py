@@ -16,7 +16,7 @@ def days_left(date1, date2):
     numDays = daysLeft.split(' ')
     return numDays[0]
 
-# Start Canvas:
+# Make Canvas
 root = Tk()
 c = Canvas(root, width = 1000, height = 800, bg = 'black') # Creates a canvas called c
 c.pack() # Packs the canvas into the tkinter window
@@ -38,5 +38,5 @@ for count in range(len(daysLeft)):
     c.create_text(30, y, anchor = 'w', fill = colors[count%len(colors)], font = 'Arial 32 bold', text = displayText)
     y += 50
 
-# End:
+# End
 root.mainloop()
