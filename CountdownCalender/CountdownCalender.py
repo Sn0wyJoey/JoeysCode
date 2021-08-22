@@ -22,7 +22,7 @@ c = Canvas(root, width = 1000, height = 800, bg = 'black') # Creates a canvas ca
 c.pack() # Packs the canvas into the tkinter window
 c.create_text(500, 50, anchor = 'n', fill = 'orange', font = 'Arial 40 bold underline', text = 'Countdown Calander') # Creates some text
 
-# Calculate the number of days left from each event and add them into a list of lists, and sort it by the days left
+# Calculate the number of days left from each event and add them into a list of lists, and sort it by the days left, and remove the events that already passed
 events = get_events()
 numberOfDays = lambda numberOfDays : numberOfDays[1]
 events.sort(key = numberOfDays)
